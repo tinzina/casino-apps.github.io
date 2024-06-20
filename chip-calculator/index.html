@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chip Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/tic.css">
+</head>
+
+<body>
+    <div id="content">
+        <table class="units chip-calculator">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Chip Calculator</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="switch-field">
+                            <label>$5000</label>
+                        </div>
+                    </td>
+                    <td><input type="number" name="units" min="0" value="0" step="5000"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>$1000</label>
+                    </td>
+                    <td><input type="number" name="units" min="0" value="0" step="1000"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>$500</label>
+                    </td>
+                    <td><input type="number" name="units" min="0" value="0" step="500"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>$100</label>
+                    </td>
+                    <td><input type="number" name="units" min="0" value="0" step="100"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>$25</label>
+                    </td>
+                    <td><input type="number" name="units" min="0" value="0" step="25"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>$5</label>
+                    </td>
+                    <td><input type="number" name="units" min="0" value="0" step="5"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>$2.50</label>
+                    </td>
+                    <td><input type="number" name="units" min="0" value="0" step="2.5"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>$1</label>
+                    </td>
+                    <td><input type="number" name="units" min="0" value="0" step="1"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>$0.25</label>
+                    </td>
+                    <td><input type="number" name="units" min="0" value="0" step="0.25"></td>
+                </tr>
+                <tr id="totalRow">
+                    <td style="text-align: right;padding-right: 8px;">
+                        <label>Total</label>
+                    </td>
+                    <td><input type="text" id="totalInput" min="0" value="0" disabled></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button class="reset-button" id="reset-button">Reset</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <select size='1' id="weekdayCombo">
+            <option>Sunday</option>
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thusday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+        </select>
+
+        <table id="toke-stats" class="toke-stats">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Min</th>
+                    <th>Avg</th>
+                    <th>Max</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Hours</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Total</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Hourly</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Est.</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/toke.js"></script>
+    <script src="js/averages.js"></script>
+    <script src="js/tic.js" type="module"></script>
+</body>
+
+</html>

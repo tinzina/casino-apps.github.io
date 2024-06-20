@@ -1,0 +1,203 @@
+﻿#settings {
+  background-color: azure;
+  border: thin black solid;
+  left: 20px;
+  top: 5px;
+  position: fixed;
+  height: 600px;
+  width: 230px;
+}
+
+#results,
+#PictureBetsCheatSheet {
+  background-color: azure;
+  border: thin black solid;
+  overflow: scroll;
+  left: 20px;
+  top: 5px;
+  position: fixed;
+  height: 600px;
+  width: 100%;
+}
+
+#PictureBetsCheatSheet {
+  max-width: 600px;
+  z-index: 100;
+}
+
+#PictureBetsCheatSheet table {
+  border: 1px solid green;
+  border-collapse: collapse;
+  max-width: 600px;
+}
+
+#PictureBetsCheatSheet table td {
+  border: 1px solid green;
+}
+
+#controls {
+  background-color: #008000;
+  left: 20px;
+  top: 400px;
+  position: fixed;
+  width: 230px;
+}
+
+#bet-18::before {
+  content: "18";
+  border-radius: 25px;
+  background: red;
+  padding: 20px;
+  border-radius: 40px;
+}
+
+#bet-17::before {
+  content: "17";
+  border-radius: 25px;
+  background: black;
+  padding: 20px;
+  border-radius: 40px;
+}
+
+#bet-16::before {
+  content: "16";
+  border-radius: 25px;
+  background: red;
+  padding: 20px;
+  border-radius: 40px;
+}
+
+.incorrect-answer {
+  color: red;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: mediumblue;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+#chip-R1C1 {
+  top: 20px;
+  left: 25px;
+}
+#chip-R1C2 {
+  top: 20px;
+  left: 100px;
+}
+
+#chip-R1C3 {
+  top: 20px;
+  left: 175px;
+}
+
+#chip-R2C1 {
+  top: 95px;
+  left: 25px;
+}
+#chip-R2C2 {
+  top: 95px;
+  left: 100px;
+}
+
+#chip-R2C3 {
+  top: 95px;
+  left: 175px;
+}
+
+#chip-R3C1 {
+  top: 170px;
+  left: 25px;
+}
+#chip-R3C2 {
+  top: 170px;
+  left: 100px;
+}
+
+#chip-R3C3 {
+  top: 170px;
+  left: 175px;
+}
+#chip-R4C1 {
+  top: 245px;
+  left: 25px;
+}
+#chip-R4C2 {
+  top: 245px;
+  left: 100px;
+}
+
+#chip-R4C3 {
+  top: 245px;
+  left: 175px;
+}
+#chip-R5C1 {
+  top: 320px;
+  left: 25px;
+}
+#chip-R5C2 {
+  top: 320px;
+  left: 100px;
+}
+
+#chip-R5C3 {
+  top: 320px;
+  left: 175px;
+}
+
+#table-betting-area {
+  /* position: fixed; */
+  left: 60px;
+  margin-left: -110px;
+  margin-top: 40px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: white;
+  height: 450px;
+  width: 450px;
+}
+
+#table-betting-area td {
+  background-color: #008000;
+  border-style: solid;
+  border-width: medium;
+  font-size: 36px;
+  text-align: center;
+  vertical-align: middle;
+  height: 150px;
+  width: 150px;
+}
+
+#betting-area {
+  background-color: #008000;
+  background-repeat: no-repeat;
+  border: thin black solid;
+  left: 20px;
+  top: 5px;
+  position: fixed;
+  height: 600px;
+  width: 230px;
+  overflow: hidden;
+}
+
+#feedback {
+  font-size: 24px;
+  position: fixed; /* Ensure it stays in place */
+  top: 20px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  padding-left: 5px;
+}
+
+.feedback-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+
+.feedback-icon.checkmark {
+  color: purple;
+}
+
+.feedback-icon.x-mark {
+  color: red;
+}

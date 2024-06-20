@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Important -->
+    <title>Dominoes Scorekeeper</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" type="module"></script>
+
+</head>
+
+<body>
+    <main>
+        <h2>Dominoes Scorekeeper</h2>
+        <domino-player id="player-1" data-placeholder="Player 1"></domino-player>
+        <domino-player id="player-2" data-placeholder="Player 2"></domino-player>
+        <domino-player id="player-3" data-placeholder="Player 3"></domino-player>
+        <domino-player id="player-4" data-placeholder="Player 4"></domino-player>
+        <score-dialog></score-dialog>
+        <div class="reset-buttons">
+            <button id="reset-scores">Reset Scores</button>
+            <button id="reset-names">Reset Names</button>
+            <label class="custom-checkbox">
+                <input type="checkbox" id="rotate-checkbox">
+                <span class="checkmark">✓</span> Rotate
+            </label>
+        </div>
+    </main>
+</body>
+
+</html>

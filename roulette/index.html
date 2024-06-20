@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Free Table Games Roulette Quiz">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="Thomas Inzina">
+
+	<title>Roulette Training</title>
+	<script src="jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/roulette.css">
+	<link rel="stylesheet" type="text/css" href="css/chip.css">
+
+	<style type="text/css">
+	</style>
+</head>
+
+<body>
+	<div id="betting-area">
+		<table id="table-betting-area">
+			<tr>
+				<td></td>
+				<td id="bet-18"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td id="bet-17"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td id="bet-16"></td>
+				<td></td>
+			</tr>
+		</table>
+		<!-- http://cssdeck.com/labs/css3-only-poker-chips -->
+
+		<section>
+			<div id="chip-R1C1" class="fish blue">
+				<div class="chip" data-chip="Lines"></div>
+			</div>
+
+			<div id="chip-R1C2" class="fish blue">
+				<div class="chip" data-chip="Streets"></div>
+			</div>
+
+			<div id="chip-R1C3" class="fish blue">
+				<div class="chip" data-chip="Lines"></div>
+			</div>
+		</section>
+
+		<section>
+			<div id="chip-R3C1" class="fish blue">
+				<div class="chip" data-chip="Corners"></div>
+			</div>
+
+			<div id="chip-R3C2" class="fish blue">
+				<div class="chip" data-chip="Splits"></div>
+			</div>
+
+			<div id="chip-R3C3" class="fish blue">
+				<div class="chip" data-chip="Corners"></div>
+			</div>
+		</section>
+
+		<section>
+			<div id="chip-R4C1" class="fish blue">
+				<div class="chip" data-chip="Splits"></div>
+			</div>
+
+			<div id="chip-R4C2" class="fish blue">
+				<div class="chip" data-chip="Straight-Ups"></div>
+			</div>
+
+			<div id="chip-R4C3" class="fish blue">
+				<div class="chip" data-chip="Splits"></div>
+			</div>
+		</section>
+
+		<section>
+			<div id="chip-R5C1" class="fish blue">
+				<div class="chip" data-chip="Corners"></div>
+			</div>
+
+			<div id="chip-R5C2" class="fish blue">
+				<div class="chip" data-chip="Splits"></div>
+			</div>
+
+			<div id="chip-R5C3" class="fish blue">
+				<div class="chip" data-chip="Corners"></div>
+			</div>
+		</section>
+
+		<section id="controls">
+			<fieldset>
+				<input type="button" id="open-settings" value="Restart">
+				<input type="button" id="results-button" value="Quit">
+				<select id="list-picture-names">
+					<option value="Name That Picture Bet" selected>Name That Picture Bet</option>
+					<option value="Blackjack">Blackjack</option>
+					<option value="Box">Box</option>
+					<option value="Bowl">Bowl</option>
+					<option value="Corner Pocket">Corner Pocket</option>
+					<option value="Deck of Cards">Deck of Cards</option>
+					<option value="Full House">Full House</option>
+					<option value="H Pattern">H Pattern</option>
+					<option value="Inside L">Inside L</option>
+					<option value="Jesus Age">Jesus Age</option>
+					<option value="Lovers">Lovers</option>
+					<option value="Outside L">Outside L</option>
+					<option value="Picture Frame">Picture Frame</option>
+					<option value="Plus Pattern">Plus Pattern</option>
+					<option value="Railroad">Railroad</option>
+					<option value="Straight In">Straight In</option>
+					<option value="T Pattern">T Pattern</option>
+					<option value="V Pattern">V Pattern</option>
+					<option value="X Pattern">X Pattern</option>
+				</select>
+				<br>
+				<label for="payout">Payout:</label>
+				<input type="number" id="payout" size="8">
+				<input type="button" id="next-button" value="Next">
+				<input type="text" id="statusbar" value="" disabled>
+			</fieldset>
+			<div id="feedback"></div>
+		</section>
+	</div>
+
+	<div id="settings">
+		<form>
+			<fieldset id="RegularBets">
+				<legend>Roulette Bets</legend>
+				<label for="Straight-Ups">Straight Ups</label>
+				<input id="Straight-Ups" type="number" min="0" max="50" value="10"><br>
+				<label for="Splits">Splits</label>
+				<input id="Splits" type="number" min="0" max="50" value="10"><br>
+				<label for="Corners">Corners</label>
+				<input id="Corners" type="number" min="0" max="50" value="10"><br>
+				<label for="Streets">Streets</label>
+				<input id="Streets" type="number" min="0" max="50" value="0"><br>
+				<label for="Lines">Lines</label>
+				<input id="Lines" type="number" min="0" max="50" value="0"><br>
+			</fieldset>
+			<fieldset>
+				<input type="checkbox" name="picture-bets" value="Blackjack" checked>Blackjack<br>
+				<input type="checkbox" name="picture-bets" value="Bowl" checked>Bowl<br>
+				<input type="checkbox" name="picture-bets" value="Box" checked>Box<br>
+				<input type="checkbox" name="picture-bets" value="Corner Pocket" checked>Corner Pocket<br>
+				<input type="checkbox" name="picture-bets" value="Deck of Cards" checked>Deck of Cards<br>
+				<input type="checkbox" name="picture-bets" value="Full House" checked>Full House<br>
+				<input type="checkbox" name="picture-bets" value="H Pattern" checked>H Pattern<br>
+				<input type="checkbox" name="picture-bets" value="Inside L" checked>Inside L<br>
+				<input type="checkbox" name="picture-bets" value="Jesus Age" checked>Jesus Age<br>
+				<input type="checkbox" name="picture-bets" value="Lovers" checked>Lovers<br>
+				<input type="checkbox" name="picture-bets" value="Outside L" checked>Outside L<br>
+				<input type="checkbox" name="picture-bets" value="Picture Frame" checked>Picture Frame<br>
+				<input type="checkbox" name="picture-bets" value="Plus Pattern" checked>Plus Pattern<br>
+				<input type="checkbox" name="picture-bets" value="Railroad" checked>Railroad<br>
+				<input type="checkbox" name="picture-bets" value="Straight In" checked>Straight In<br>
+				<input type="checkbox" name="picture-bets" value="T Pattern" checked>T Pattern<br>
+				<input type="checkbox" name="picture-bets" value="V Pattern" checked>V Pattern<br>
+				<input type="checkbox" name="picture-bets" value="X Pattern" checked>X Pattern<br>
+			</fieldset>
+			<fieldset>
+				<label for="number-of-questions">Number of Questions</label>
+				<input type="number" id="number-of-questions" min="0" max="100" step="1" value="5" size="5">
+				<br>
+				<input type="button" id="start-button" value="Start">
+				<select id="list-bet-type">
+					<option value="regular-bets" selected>Regular Bets</option>
+					<option value="picture-bets">Picture Bets</option>
+				</select>
+				<br>
+				<input type="button" id="Show-PictureBetsCheatSheet" value="Picture Bet Study Guide">
+			</fieldset>
+		</form>
+	</div>
+
+	<div id="results">
+		<h1 id="resultsH1"></h1>
+		<input type="button" id="close-results-button" value="Close">
+
+		<fieldset>
+			<ol id="answers"></ol>
+		</fieldset>
+	</div>
+
+	<div id="PictureBetsCheatSheet">
+		<input type="button" id="Hide-PictureBetsCheatSheet" value="Close">
+		<table style="width: 100%">
+			<thead>
+				<tr>
+					<th>Picture Bet</th>
+					<th>Payout</th>
+					<th>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Blackjack</td>
+					<td>21</td>
+					<td>1 Street and 2 Lines</td>
+				</tr>
+				<tr>
+					<td>Bowl</td>
+					<td>67</td>
+					<td>3 Splits and 2 Corners</td>
+				</tr>
+				<tr>
+					<td>Box</td>
+					<td>77</td>
+					<td>2 Splits , 1 Corner, and 1 Straight Up</td>
+				</tr>
+				<tr>
+					<td>Corner Pocket</td>
+					<td>43</td>
+					<td>1 Corner and 1 Straight Up</td>
+				</tr>
+				<tr>
+					<td>Deck of Cards</td>
+					<td>52</td>
+					<td>1 Split and 1 Straight Up</td>
+				</tr>
+				<tr>
+					<td>Full House</td>
+					<td>135</td>
+					<td>4 Splits, 4 Corners, and 1 Straight Up</td>
+				</tr>
+				<tr>
+					<td>H Pattern</td>
+					<td>101</td>
+					<td>2 Splits, 4 Corners, and 1 Straight Up</td>
+				</tr>
+				<tr>
+					<td>Inside L</td>
+					<td>60</td>
+					<td>1 Split, 1 Corner, and 1 Straight Up</td>
+				</tr>
+				<tr>
+					<td>Jesus Age</td>
+					<td>33</td>
+					<td>1 Split and 2 Corners</td>
+				</tr>
+				<tr>
+					<td>Lovers</td>
+					<td>69</td>
+					<td>2 Splits and 1 Straight Up</td>
+				</tr>
+				<tr>
+					<td>Outside L</td>
+					<td>42</td>
+					<td>2 Splits and 1 Corner</td>
+				</tr>
+				<tr>
+					<td>Picture Frame</td>
+					<td>100</td>
+					<td>4 Splits and 4 Corners</td>
+				</tr>
+				<tr>
+					<td>Plus Pattern</td>
+					<td>103</td>
+					<td>4 Splits and 1 Straight Up</td>
+				</tr>
+				<tr>
+					<td>Railroad</td>
+					<td>102</td>
+					<td>3 Splits , 2 Corners , and 1 Straight Up</td>
+				</tr>
+				<tr>
+					<td>Straight In</td>
+					<td>25</td>
+					<td>1 Split and 1 Corner</td>
+				</tr>
+				<tr>
+					<td>T Pattern</td>
+					<td>86</td>
+					<td>3 Splits and 1 Straight Up</td>
+				</tr>
+				<tr>
+					<td>V Pattern</td>
+					<td>51</td>
+					<td>2 Corners and 1 Straight Up</td>
+				</tr>
+				<tr>
+					<td>X Pattern</td>
+					<td>67</td>
+					<td>4 Corners and 1 Straight Up</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<script src="js/roulette.js"></script>
+
+</body>
+
+</html>

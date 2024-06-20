@@ -1,0 +1,121 @@
+{
+  "Monday": {
+    "tokeDrop": {
+      "min": 19704.87,
+      "max": 42594.96,
+      "average": 26439.23
+    },
+    "dealerHours": {
+      "min": 968,
+      "max": 1520,
+      "average": 1062.78
+    },
+    "rate": {
+      "min": 19.46,
+      "max": 31.39,
+      "average": 24.67
+    }
+  },
+  "Tuesday": {
+    "tokeDrop": {
+      "min": 19383.33,
+      "max": 43146.01,
+      "average": 26254.99
+    },
+    "dealerHours": {
+      "min": 860.25,
+      "max": 1365,
+      "average": 1009.13
+    },
+    "rate": {
+      "min": 20.36,
+      "max": 35.03,
+      "average": 25.81
+    }
+  },
+  "Wednesday": {
+    "tokeDrop": {
+      "min": 18061.31,
+      "max": 37418.95,
+      "average": 26549.67
+    },
+    "dealerHours": {
+      "min": 948,
+      "max": 1113,
+      "average": 1031.21
+    },
+    "rate": {
+      "min": 17.76,
+      "max": 33.62,
+      "average": 25.61
+    }
+  },
+  "Thursday": {
+    "tokeDrop": {
+      "min": 24901,
+      "max": 45028.62,
+      "average": 32981.78
+    },
+    "dealerHours": {
+      "min": 1123.25,
+      "max": 1192.75,
+      "average": 1164.54
+    },
+    "rate": {
+      "min": 21.9,
+      "max": 40.09,
+      "average": 28.37
+    }
+  },
+  "Friday": {
+    "tokeDrop": {
+      "min": 33841.75,
+      "max": 73848.2,
+      "average": 46192.52
+    },
+    "dealerHours": {
+      "min": 1552.75,
+      "max": 1886.75,
+      "average": 1667
+    },
+    "rate": {
+      "min": 19.92,
+      "max": 40.92,
+      "average": 27.39
+    }
+  },
+  "Saturday": {
+    "tokeDrop": {
+      "min": 24880.97,
+      "max": 76822.63,
+      "average": 52403.32
+    },
+    "dealerHours": {
+      "min": 1548.75,
+      "max": 2069,
+      "average": 1870
+    },
+    "rate": {
+      "min": 16.07,
+      "max": 38.35,
+      "average": 27.57
+    }
+  },
+  "Sunday": {
+    "tokeDrop": {
+      "min": 24906.03,
+      "max": 41031.4,
+      "average": 32361.26
+    },
+    "dealerHours": {
+      "min": 1391.75,
+      "max": 1495.75,
+      "average": 1444
+    },
+    "rate": {
+      "min": 16.65,
+      "max": 28.34,
+      "average": 22.45
+    }
+  }
+}

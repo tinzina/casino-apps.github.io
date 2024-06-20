@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/calculator.css">
+    <script src="./js/calculator.js" type="module"></script>
+</head>
+
+<body>
+    <table class="bet">
+        <thead>
+            <tr>
+                <th>Bet</th>
+                <th>Amount</th>
+                <th>Chips</th>
+                <th>Cash</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="switch-field">
+                        <label>Straight-Up</label>
+                    </div>
+                </td>
+                <td><input type="number" name="bet" min="0" value="0" odds="35"></td>
+                <td class="chip-payout">0</td>
+                <td class="cash-payout money">0</td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Split</label>
+                </td>
+                <td><input type="number" name="bet" min="0" value="0" odds="17"></td>
+                <td class="chip-payout">0</td>
+                <td class="cash-payout money">0</td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Corner</label>
+                </td>
+                <td><input type="number" name="bet" min="0" value="0" odds="8"></td>
+                <td class="chip-payout">0</td>
+                <td class="cash-payout money">0</td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Street</label>
+                </td>
+                <td><input type="number" name="bet" min="0" value="0" odds="11"></td>
+                <td class="chip-payout">0</td>
+                <td class="cash-payout money">0</td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Line</label>
+                </td>
+                <td><input type="number" name="bet" min="0" value="0" odds="5"></td>
+                <td class="chip-payout">0</td>
+                <td class="cash-payout money">0</td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Top-Line</label>
+                </td>
+                <td><input type="number" name="bet" min="0" value="0" odds="6"></td>
+                <td class="chip-payout">0</td>
+                <td class="cash-payout money">0</td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="text-align: right;padding-right: 8px;">
+                    <label>Totals</label>
+                </td>
+                <td><span id="total-chip-payout"></td>
+                <td class="money"><span id="total-cash-payout"></span></td>
+            </tr>
+            <tr class="cash-chip-payout">
+                <td colspan="2" style="text-align: right; padding-right: 8px;">
+                    <button class="cash-chip-payout-dialog-button">Cash & Chip Payout</button>
+                </td>
+                <td class="chip-payout"></td>
+                <td class="cash-payout money">0</td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <button class="bet-button">1</button>
+                    <button class="bet-button active">5</button>
+                    <button class="bet-button">25</button>
+                    <button class="bet-button">100</button>
+                    <button class="bet-button">500</button>
+                    <button class="bet-button">1000</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <button class="reset-button" style="width: 100%;">Reset</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <dialog id="cash-chip-payout-dialog">
+        <form method="dialog">
+            <h3>Cash & Chip Payout</h3>
+            <label for="total-chips">Total Chips:</label>
+            <input type="number" id="total-chips" name="total-chips" min="0">
+            <label for="cash-out">Cash Out:</label>
+            <input type="number" id="cash-out" name="cash-out" min="0">
+            <label for="chips-out">Chips Out:</label>
+            <input type="number" id="chips-out" name="chips-out" min="0" readonly>
+            <menu>
+                <button type="button" id="update-dialog">Update</button>
+                <button type="reset" id="close-dialog">Close</button>
+            </menu>
+        </form>
+    </dialog>
+</body>
+
+</html>

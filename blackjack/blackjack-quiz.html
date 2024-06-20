@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Math Quiz</title>
+</head>
+
+<body>
+    <div id="question"></div>
+    <select id="payout">
+        <option value="">Select a payout</option>
+        <?php
+            for ($i = 5; $i <= 100; $i += 5) {
+                echo "<option value='$i'>$i</option>";
+            }
+        ?>
+    </select>
+    <input type="text" id="answer">
+    <button onclick="checkAnswer()">Check Answer</button>
+    <div id="result"></div>
+
+    <script>
+        // Define an array of questions and answers
+        var questions = [
+            { question: "What is the payout for a blackjack with a 3 to 2 ratio?", answer: "1.5" },
+            { question: "What is the payout for a blackjack with a 6 to 5 ratio?", answer: "1.2" }
+        ];
+
+        // Randomly select a question from the array
+        var randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+
+        // Display the question
+        document.getElementById("question").innerHTML = randomQuestion.question;
+
+        // Function to check the user's answer
+        function checkAnswer() {
+            var userAnswer = document.getElementById("answer").value;
+            var result = document.getElementById("result");
+
+            if (userAnswer === randomQuestion.answer) {
+                result.innerHTML = "Correct!";
+            } else {
+                result.innerHTML = "Incorrect. The correct answer is " + randomQuestion.answer + ".";
+            }
+        }
+    </script>
+</body>
+
+</html>
